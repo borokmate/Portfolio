@@ -18,11 +18,6 @@ body {
   overflow-x: hidden;
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 /* LIGHT MODE */
 body.light {
   --bg: #f1f5f9;
@@ -187,6 +182,7 @@ body.light {
 @media (max-width: 768px) {
   .carousel-wrapper { height: 260px; }
   .carousel-item { width: 320px; height: 200px; }
+  .carousel-item.left, .carousel-item.right { display: none;} 
 }
 
 /* Hover overlay */
