@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borók Máté | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">BM</h1>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="close-menu" id="closeMenu">✕ Close</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <!-- FIX: changed <h2> to <h1> to match CSS selector #hero h1 -->
+  <section id="hero" class="hero">
+    <h1>Hi, I'm <span class="accent">Borók Máté</span></h1>
+    <p>Professional procrastinator</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-arrow left" id="carouselLeft">‹</button>
+      <div class="carousel" id="carousel">
+
+        <div class="carousel-item" data-title="Gubi Clicker" data-link="https://github.com/borokmate/Gubi-Clicker" data-description="It's basically an OP auto clicker copy made in Python, PySide6" data-mainImage="gubis-fr.png">
+          <img src="gubis-fr.png" alt="Gubi Clicker">
+          <div class="carousel-overlay">
+            <span class="overlay-title">Gubi Clicker</span>
+            <span class="overlay-hint">Click to view</span>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-title="Data Structures Practice" data-link="https://github.com/borokmate/Data-Structures-practice" data-description="So far it's just a linked list. I did it cuz the 12th graders were doing it AND I wanted to practice NeoVim, yeah you can see it in the way it was tabulated LMAO.">
+          <img src="Drawing to explain to Morgan.png" alt="Data Structures Practice">
+          <div class="carousel-overlay">
+            <span class="overlay-title">Data Structures Practice</span>
+            <span class="overlay-hint">Click to view</span>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-title="Song bot" data-link="https://github.com/borokmate/Song_Cover_Bot" data-description="Basic dumb ahh bot just for our goofy little band thingy.">
+          <img src="____ ___ _____ ______.jpg" alt="Song bot">
+          <div class="carousel-overlay">
+            <span class="overlay-title">Discord Bot</span>
+            <span class="overlay-hint">Click to view</span>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-title="Hagyma Amobea" data-link="https://github.com/username/other-project" data-description="Description coming soon. This project is still in progress — check back later or view the GitHub repo for the latest updates.">
+          <img src="____ ___ _____ ______.jpg" alt="Other Project">
+          <div class="carousel-overlay">
+            <span class="overlay-title">Other Project</span>
+            <span class="overlay-hint">Click to view</span>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-arrow right" id="carouselRight">›</button>
+    </div>
+  </section>
+
+  <!-- Modal for project details -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose">✕</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <div class="modal-images">
+        <img id="modalImage" src="" alt="Project Screenshot">
+      </div>
+      <a id="modalLink" href="#" target="_blank" class="btn">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2>Languages &amp; Skills</h2>
+    <div class="skill-grid">
+
+      <div class="card skill-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <h3>C#</h3>
+        <p>Unity, Godot, general OOP programming</p>
+      </div>
+
+      <div class="card skill-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <h3>Python</h3>
+        <p>Pygame, Discord bots, scripts</p>
+      </div>
+
+      <div class="card skill-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <h3>JavaScript</h3>
+        <p>DOM manipulation, web projects</p>
+      </div>
+
+      <div class="card skill-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <h3>C++</h3>
+        <p>OpenGL, some passion projects</p>
+      </div>
+
+      <div class="card skill-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <h3>GLSL</h3>
+        <p>Shading, duh</p>
+      </div>
+
+      <div class="card skill-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <h3>Scratch</h3>
+        <p>Mhhhhh</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <!-- FIX: wrapped form in a proper section with id="contact" -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form id="contactForm" action="https://formspree.io/f/xojnrzjw" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit" id="submitBtn" class="btn">Send</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
