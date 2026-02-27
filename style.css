@@ -18,6 +18,11 @@ body {
   overflow-x: hidden;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /* LIGHT MODE */
 body.light {
   --bg: #f1f5f9;
