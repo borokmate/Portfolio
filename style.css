@@ -180,10 +180,9 @@ body.light {
 }
 
 @media (max-width: 768px) {
-  .carousel-wrapper     { height: 260px; }
-  .carousel-item        { width: 320px; height: 200px; }
-  .carousel-item.left   { transform: translateX(0px) scale(0.75); z-index: 5;  opacity: 0.7; filter: blur(3px);  }
-  .carousel-item.right  { transform: translateX(0px)  scale(0.75); z-index: 5;  opacity: 0.7; filter: blur(3px);  }
+  .carousel-wrapper { height: 260px; }
+  .carousel-item { width: 320px; height: 200px; }
+  .carousel-item.left, .carousel-item.right { display: none;} 
 }
 
 /* Hover overlay */
