@@ -84,8 +84,6 @@ form.addEventListener("submit", function(e) {
 });
 
 // CAROUSEL
-// FIX: removed the broken duplicate block that used getElementById("projectCarousel")
-// (which doesn't exist) and called scrollBy — it was crashing before the real logic ran.
 const carouselItems = document.querySelectorAll(".carousel-item");
 let currentIndex = 0;
 
@@ -93,8 +91,8 @@ function updateCarousel() {
   carouselItems.forEach((item, index) => {
     item.classList.remove("left", "right", "center", "hidden");
     if (index === currentIndex)         item.classList.add("center");
-    else if (index === currentIndex - 1) item.classList.add("left");
-    else if (index === currentIndex + 1) item.classList.add("right");
+    else if (index === currentIndex - 1 || (index === carouselItems.length - 1 && currentIndex - 1 < 0))    item.classList.add("left");
+    else if (index === currentIndex + 1 || (index === 0 && carouselItems.length <= currentIndex + 1))       item.classList.add("right");
     else                                 item.classList.add("hidden");
   });
 }
