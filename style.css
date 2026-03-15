@@ -5,6 +5,11 @@
   --text: #f8fafc;
 }
 
+#game{
+  display: absolute;
+  transform: translateX(70%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
